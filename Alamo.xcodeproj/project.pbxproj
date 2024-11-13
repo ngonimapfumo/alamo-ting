@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		7D2CB17BED5BF845BF85C71F /* Pods_Alamo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5706FFBEB7CF0F57781B0BC /* Pods_Alamo.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		0FFC2B5D2AB6BBEA617C3D2D /* Pods-Alamo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alamo.release.xcconfig"; path = "Target Support Files/Pods-Alamo/Pods-Alamo.release.xcconfig"; sourceTree = "<group>"; };
 		23DB023C2CE3F05200180F7D /* Alamo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alamo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4333E911DD24D8FCDB96C434 /* Pods-Alamo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alamo.debug.xcconfig"; path = "Target Support Files/Pods-Alamo/Pods-Alamo.debug.xcconfig"; sourceTree = "<group>"; };
+		C5706FFBEB7CF0F57781B0BC /* Pods_Alamo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alamo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D2CB17BED5BF845BF85C71F /* Pods_Alamo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +55,8 @@
 			children = (
 				23DB023E2CE3F05200180F7D /* Alamo */,
 				23DB023D2CE3F05200180F7D /* Products */,
+				89488D4B22E627123F08A8D6 /* Pods */,
+				3B427EF2254BEAD08E53669C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +68,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		3B427EF2254BEAD08E53669C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5706FFBEB7CF0F57781B0BC /* Pods_Alamo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		89488D4B22E627123F08A8D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4333E911DD24D8FCDB96C434 /* Pods-Alamo.debug.xcconfig */,
+				0FFC2B5D2AB6BBEA617C3D2D /* Pods-Alamo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +92,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23DB024F2CE3F05300180F7D /* Build configuration list for PBXNativeTarget "Alamo" */;
 			buildPhases = (
+				C82A7CD3F77807E101D483AD /* [CP] Check Pods Manifest.lock */,
 				23DB02382CE3F05200180F7D /* Sources */,
 				23DB02392CE3F05200180F7D /* Frameworks */,
 				23DB023A2CE3F05200180F7D /* Resources */,
+				D94606A7B2918E37D729B5FE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,8 +106,6 @@
 				23DB023E2CE3F05200180F7D /* Alamo */,
 			);
 			name = Alamo;
-			packageProductDependencies = (
-			);
 			productName = Alamo;
 			productReference = 23DB023C2CE3F05200180F7D /* Alamo.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +154,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C82A7CD3F77807E101D483AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Alamo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D94606A7B2918E37D729B5FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alamo/Pods-Alamo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alamo/Pods-Alamo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Alamo/Pods-Alamo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		23DB02382CE3F05200180F7D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +209,7 @@
 /* Begin XCBuildConfiguration section */
 		23DB02502CE3F05300180F7D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4333E911DD24D8FCDB96C434 /* Pods-Alamo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -160,14 +230,19 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nm.Alamo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		23DB02512CE3F05300180F7D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FFC2B5D2AB6BBEA617C3D2D /* Pods-Alamo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -188,9 +263,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nm.Alamo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -231,7 +310,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -294,7 +373,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

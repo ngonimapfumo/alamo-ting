@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        AF.request("https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=7337147a8504643a7cab939e6c7b6d18").response{
+            response in print(response)
+        }
+        
     }
 
 
